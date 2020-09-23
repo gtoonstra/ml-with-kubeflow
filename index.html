@@ -33,7 +33,8 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ML with Kubeflow v1.1" href="#"/> 
+    <link rel="top" title="ML with Kubeflow v1.1" href="#"/>
+        <link rel="next" title="Quick deploy" href="quickdeploy.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> ML with kubeflow v1.1
+            <a href="#" class="icon icon-home"> ML with kubeflow v1.0.1
           
 
           
@@ -83,14 +84,10 @@
     
             
             
-                <!-- Local TOC -->
-                <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">ML with Kubeflow documentation site</a><ul>
-<li><a class="reference internal" href="#content">Content</a></li>
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="quickdeploy.html">Quick deploy</a></li>
 </ul>
-</li>
-</ul>
-</div>
+
             
           
     <br/>
@@ -106,7 +103,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">ML with kubeflow v1.1</a>
+        <a href="#">ML with kubeflow v1.0.1</a>
       </nav>
 
 
@@ -144,21 +141,57 @@ Kubeflow. This site is not affiliated, monitored or controlled by
 the official Kubeflow development effort. If you are looking for
 the official documentation site, please follow this link:</p>
 <p><a class="reference external" href="https://www.kubeflow.org//">Official Kubeflow documentation</a></p>
-<p>What you will find here is a step-by-step tutorial, incrementally increasing
+<p class="last">What you will find here is a step-by-step tutorial, incrementally increasing
 the complexity and adding more capabilities from Kubeflow.</p>
-<p>Why?  As I started learning about Kubeflow, I found it confusing:
-- There have been some versions already and some examples only apply to the older versions
-- The examples are in different repositories, only online or are difficult to execute on your</p>
+</div>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first">You can find this project on github:</p>
+<p><a class="reference external" href="https://github.com/gtoonstra/docker-airflow">https://github.com/gtoonstra/docker-airflow</a></p>
+<img alt="_images/GitHub-Mark-Light-32px.png" class="last" src="_images/GitHub-Mark-Light-32px.png" />
+</dd>
+</dl>
+<div class="section" id="why-this-documentation-site">
+<h2>Why this documentation site?<a class="headerlink" href="#why-this-documentation-site" title="Permalink to this headline">¶</a></h2>
+<p>As I started learning about Kubeflow, I found it confusing:</p>
 <blockquote>
-<div>deployment of Kubeflow</div></blockquote>
-<ul class="last simple">
+<div><ul class="simple">
+<li>There have been some versions already and some examples only apply to the older versions</li>
+<li>The examples are in different repositories, only online or are difficult to execute on your
+deployment of Kubeflow</li>
 <li>The concepts are sometimes described, but not exemplified, and you need to look for a working
 example to understand how it works in practice.</li>
 </ul>
+</div></blockquote>
+<p>I am also the author of the successful documentation site &#8220;ETL with airflow&#8221;, which has, I think,
+helped numerous engineers in understanding airflow and get up to speed with that. I want to give
+people a similar experience with kubeflow, which for me at least is more complex than airflow.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>You need an experimental environment at your disposal, which is capable of running kubeflow pipelines.
+This is either a beefy desktop / laptop (minimum 16G) or an experimental cluster in the cloud.</p>
+</div>
+<div class="section" id="study-guide">
+<h2>Study Guide<a class="headerlink" href="#study-guide" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Quick install of the &#8220;Pipelines&#8221; component</li>
+<li>Hello world examples</li>
+<li>More examples up to &#8220;componentizing&#8221; parts of your pipeline</li>
+<li>More advanced features that not everyone needs</li>
+<li>Conclusions on what we learned so far</li>
+<li>Diving deeper: Relevant kubernetes design</li>
+<li>Diving deeper: Kubeflow design</li>
+<li>Extracting principles from Kubeflow&#8217;s design</li>
+<li>Why those principles matter</li>
+</ol>
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickdeploy.html">Quick deploy</a></li>
+</ul>
 </div>
 </div>
 </div>
@@ -167,6 +200,13 @@ example to understand how it works in practice.</li>
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quickdeploy.html" class="btn btn-neutral float-right" title="Quick deploy" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
