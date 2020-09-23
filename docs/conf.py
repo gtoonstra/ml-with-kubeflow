@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ML with kubeflow v1.1'
+project = u'ML with kubeflow v1.0.1'
 copyright = u'2020, Gerard Toonstra'
 author = u'Gerard Toonstra'
 
