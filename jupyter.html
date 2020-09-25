@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Jupyter lab &mdash; ML with Kubeflow v1.1</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="ML with Kubeflow v1.1" href="index.html"/>
+        <link rel="next" title="Hello world" href="helloworld.html"/>
+        <link rel="prev" title="Quick deploy" href="quickdeploy.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ML with kubeflow v1.0.1
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickdeploy.html">Quick deploy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Jupyter lab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#when-you-deployed-on-google-cloud">When you deployed on Google Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#when-you-deployed-locally">When you deployed locally</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="helloworld.html">Hello world</a></li>
+</ul>
+
+            
+          
+    <br/>
+    <br/>
+    <a href="https://github.com/gtoonstra/ml-with-kubeflow"><img src="_images/GitHub-Mark-Light-32px.png">&nbsp;Go to Github</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ML with kubeflow v1.0.1</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Jupyter lab</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jupyter-lab">
+<h1>Jupyter lab<a class="headerlink" href="#jupyter-lab" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="when-you-deployed-on-google-cloud">
+<h2>When you deployed on Google Cloud<a class="headerlink" href="#when-you-deployed-on-google-cloud" title="Permalink to this headline">¶</a></h2>
+<p>The next step is to get the jupyter notebooks going. If you deployed on the Google Cloud Platform,
+the easiest way is to use the &#8220;Notebooks&#8221; section on &#8220;AI Platform&#8221;. That will spin up a VM that is
+ready to use with jupyter preinstalled. As a matter of fact, you&#8217;ll jump straight into the UI
+when the link becomes available.</p>
+<p>You can not use Google Cloud notebooks when you deployed your cluster locally.</p>
+</div>
+<div class="section" id="when-you-deployed-locally">
+<h2>When you deployed locally<a class="headerlink" href="#when-you-deployed-locally" title="Permalink to this headline">¶</a></h2>
+<p>Locally you should create your own jupyter environment. This can be anywhere, but I suggest to do
+this in the &#8220;tutorials&#8221; directory of the repository of this site, which is where you&#8217;ll find an easy
+requirements.txt file that will pre-deploy all the necessary packages.</p>
+<p>First, create the venv in that directory and activate it:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+<span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>Then we first upgrade pip to the latest version:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span> <span class="n">setuptools</span> <span class="n">wheel</span>
+</pre></div>
+</div>
+<p>And then install the packages in the requirements:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>If everything installed fine, you can now access the jupyter lab environment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span>
+</pre></div>
+</div>
+<p>Great, so by now we should have a cluster running and a jupyter lab environment that allows us to
+interact with the cluster.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="helloworld.html" class="btn btn-neutral float-right" title="Hello world" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quickdeploy.html" class="btn btn-neutral" title="Quick deploy" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Gerard Toonstra.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -14,11 +14,13 @@ ML with Kubeflow documentation site
     the complexity and adding more capabilities from Kubeflow.
 
 ::
+
     You can find this project on github:
 
     https://github.com/gtoonstra/docker-airflow
 
-    .. image:: img/GitHub-Mark-Light-32px.png
+
+.. image:: img/GitHub-Mark-Light-32px.png
 
 
 Why this documentation site?
@@ -40,23 +42,34 @@ people a similar experience with kubeflow, which for me at least is more complex
 Prerequisites
 -------------
 
-You need an experimental environment at your disposal, which is capable of running kubeflow pipelines.
-This is either a beefy desktop / laptop (minimum 16G) or an experimental cluster in the cloud.
+**For a quick local deployment**:
+
+* A docker environment
+* A laptop/desktop that is beefy enough to run a small cluster, at least 16G of memory and 50G of diskspace.
+
+or
+
+**For a quick cloud deployment**:
+
+* I recommend Google Cloud Platform, which has a very easy method for deploying kubeflow and for which
+  you get $300 free credit when you create your project for the first time.
 
 
-Study Guide
------------
+Study flow
+----------
 
-1. Quick install of the "Pipelines" component
-2. Hello world examples
-3. More examples up to "componentizing" parts of your pipeline
-4. More advanced features that not everyone needs
-5. Conclusions on what we learned so far
-6. Diving deeper: Relevant kubernetes design
-7. Diving deeper: Kubeflow design
-8. Extracting principles from Kubeflow's design
-9. Why those principles matter
-
+1. Quick deploy of the "Kubeflow Pipelines" component
+2. Getting jupyter lab going
+3. The simplest "Hello world" example
+4. Other examples showing more of what's possible
+5. Componentization of your code.
+6. Visualization components, metrics.
+7. Conclusions on what we learned so far
+8. Diving deeper: Relevant kubernetes design
+9. Diving deeper: Kubeflow design
+10. Extracting principles from Kubeflow's design
+11. Understanding the principles and Kubeflow "Selling Points"
+12. Best practices of data science on kubeflow
 
 Content
 -------
@@ -64,3 +77,5 @@ Content
     :maxdepth: 4
 
     quickdeploy
+    jupyter
+    helloworld

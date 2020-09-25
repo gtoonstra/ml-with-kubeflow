@@ -86,6 +86,8 @@
             
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickdeploy.html">Quick deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helloworld.html">Hello world</a></li>
 </ul>
 
             
@@ -144,13 +146,12 @@ the official documentation site, please follow this link:</p>
 <p class="last">What you will find here is a step-by-step tutorial, incrementally increasing
 the complexity and adding more capabilities from Kubeflow.</p>
 </div>
-<dl class="docutils">
-<dt>::</dt>
-<dd><p class="first">You can find this project on github:</p>
-<p><a class="reference external" href="https://github.com/gtoonstra/docker-airflow">https://github.com/gtoonstra/docker-airflow</a></p>
-<img alt="_images/GitHub-Mark-Light-32px.png" class="last" src="_images/GitHub-Mark-Light-32px.png" />
-</dd>
-</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">You</span> <span class="n">can</span> <span class="n">find</span> <span class="n">this</span> <span class="n">project</span> <span class="n">on</span> <span class="n">github</span><span class="p">:</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">gtoonstra</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">airflow</span>
+</pre></div>
+</div>
+<img alt="_images/GitHub-Mark-Light-32px.png" src="_images/GitHub-Mark-Light-32px.png" />
 <div class="section" id="why-this-documentation-site">
 <h2>Why this documentation site?<a class="headerlink" href="#why-this-documentation-site" title="Permalink to this headline">¶</a></h2>
 <p>As I started learning about Kubeflow, I found it confusing:</p>
@@ -169,28 +170,50 @@ people a similar experience with kubeflow, which for me at least is more complex
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>You need an experimental environment at your disposal, which is capable of running kubeflow pipelines.
-This is either a beefy desktop / laptop (minimum 16G) or an experimental cluster in the cloud.</p>
+<p><strong>For a quick local deployment</strong>:</p>
+<ul class="simple">
+<li>A docker environment</li>
+<li>A laptop/desktop that is beefy enough to run a small cluster, at least 16G of memory and 50G of diskspace.</li>
+</ul>
+<p>or</p>
+<p><strong>For a quick cloud deployment</strong>:</p>
+<ul class="simple">
+<li>I recommend Google Cloud Platform, which has a very easy method for deploying kubeflow and for which
+you get $300 free credit when you create your project for the first time.</li>
+</ul>
 </div>
-<div class="section" id="study-guide">
-<h2>Study Guide<a class="headerlink" href="#study-guide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="study-flow">
+<h2>Study flow<a class="headerlink" href="#study-flow" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Quick install of the &#8220;Pipelines&#8221; component</li>
-<li>Hello world examples</li>
-<li>More examples up to &#8220;componentizing&#8221; parts of your pipeline</li>
-<li>More advanced features that not everyone needs</li>
+<li>Quick deploy of the &#8220;Kubeflow Pipelines&#8221; component</li>
+<li>Getting jupyter lab going</li>
+<li>The simplest &#8220;Hello world&#8221; example</li>
+<li>Other examples showing more of what&#8217;s possible</li>
+<li>Componentization of your code.</li>
+<li>Visualization components, metrics.</li>
 <li>Conclusions on what we learned so far</li>
 <li>Diving deeper: Relevant kubernetes design</li>
 <li>Diving deeper: Kubeflow design</li>
 <li>Extracting principles from Kubeflow&#8217;s design</li>
-<li>Why those principles matter</li>
+<li>Understanding the principles and Kubeflow &#8220;Selling Points&#8221;</li>
+<li>Best practices of data science on kubeflow</li>
 </ol>
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickdeploy.html">Quick deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickdeploy.html">Quick deploy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickdeploy.html#local-deploy">Local deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickdeploy.html#cloud-deploy-gcp-only">Cloud deploy (GCP only)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter lab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jupyter.html#when-you-deployed-on-google-cloud">When you deployed on Google Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter.html#when-you-deployed-locally">When you deployed locally</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="helloworld.html">Hello world</a></li>
 </ul>
 </div>
 </div>
