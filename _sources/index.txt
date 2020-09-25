@@ -79,3 +79,4 @@ Content
     quickdeploy
     jupyter
     helloworld
+    controlstructuresandmore
