@@ -143,6 +143,15 @@ execute the tasks.</p>
 <p>You can run the code on your cluster, or inspect the notebook from the tutorials directory
 on github:</p>
 <p><a class="reference external" href="https://github.com/gtoonstra/ml-with-kubeflow/tree/master/tutorials">Notebooks directory</a></p>
+<p><strong>Important takeaways from the tutorial:</strong></p>
+<ul class="simple">
+<li>Kubeflow connects components together by looking at which outputs are used as inputs to other components.</li>
+<li>The type of parameter to a function can have some special meaning or treatment by kubeflow, for example InputPath.</li>
+<li>An &#8220;op&#8221; (task) in kubeflow can explicitly define dependencies by using the &#8220;after&#8221; method call.</li>
+<li>If you need imports in a python function, you have to import them locally inside the function, not at the top level.</li>
+<li>Conditions can be used to check outputs of a component that skip parts of the flow.</li>
+<li>For complex use cases, you can write a helper python function to drive this decision.</li>
+</ul>
 </div>
 
 
