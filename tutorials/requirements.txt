@@ -1,0 +1,4 @@
+jupyterlab
+kfp
+pandas
+numpy
