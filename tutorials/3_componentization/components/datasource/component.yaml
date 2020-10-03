@@ -1,0 +1,23 @@
+# This part is the component description, describing the interface
+# for the application.
+name: datasource
+description: Generates some data for us to work with.
+inputs:
+    # There are no inputs for this application
+outputs:
+  - name: Output Path   # This is the name of the output
+    type: OutputPath    # The type determines how it is applied in kubeflow.
+                        # Simple types are simply passed, InputPath and OutputPath are more managed.
+implementation:
+  # The implementation part describes how the inputs/outputs described above are
+  # applied to the "implementation". So you'll see the names repeated, but that makes sense.
+  # It decouples the "component interface" part from the "how to run with those parameters" part.
+  container:
+    image: localhost:5000/datasource:latest
+    command: [
+      python3,  # The interpreter that we need
+      "/component/extract_data.py",  # The path to the application.
+      "--output-path",  # The name of the command line argument (see argumentparser)
+      {outputPath: Output Path}, # Substituted by kubeflow with the value of "Output Path" passed
+                                 # into the component
+    ]

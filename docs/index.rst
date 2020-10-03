@@ -80,3 +80,4 @@ Content
     jupyter
     helloworld
     controlstructuresandmore
+    componentization
