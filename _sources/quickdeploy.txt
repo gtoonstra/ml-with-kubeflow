@@ -24,14 +24,18 @@ I've had the best results with **kind**, so I suggest we follow that tutorial:
 
 `Deploying Kubeflow Pipelines standalone on local cluster <https://www.kubeflow.org/docs/pipelines/installation/localcluster-deployment/>`_
 
+However, instead of running simply `kind` as a command line utility, we'll deploy the cluster to
+have a local registry enabled. This allows us to deploy our component docker containers locally later.
+
 You should also install "kubectl", because that utility is used to deploy kubeflow and it's also
 what you would use for diagnostics to make sure everything is up and running.
 
-So when you you have kind installed on your computer, it should now be as simple as:
+The `kind_with_local_registry.sh` script is in the tutorials directory.
+So when you have kind installed on your computer, it should now be as simple as:
 
 ::
 
-    kind create cluster
+    ./kind_with_local_registry.sh
     export PIPELINE_VERSION=1.0.1
     kubectl apply -k "github.com/kubeflow/pipelines/manifests/kustomize/cluster-scoped-resources?ref=$PIPELINE_VERSION"
     kubectl wait --for condition=established --timeout=60s crd/applications.app.k8s.io

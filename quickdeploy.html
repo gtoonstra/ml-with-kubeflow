@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter lab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="helloworld.html">Hello world</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controlstructuresandmore.html">Control structures and more</a></li>
+<li class="toctree-l1"><a class="reference internal" href="componentization.html">Componentization</a></li>
 </ul>
 
             
@@ -158,10 +159,13 @@ installation methods, one of which is the one we&#8217;re going for.</p>
 <img alt="_images/install-menu.jpg" src="_images/install-menu.jpg" />
 <p>I&#8217;ve had the best results with <strong>kind</strong>, so I suggest we follow that tutorial:</p>
 <p><a class="reference external" href="https://www.kubeflow.org/docs/pipelines/installation/localcluster-deployment/">Deploying Kubeflow Pipelines standalone on local cluster</a></p>
+<p>However, instead of running simply <cite>kind</cite> as a command line utility, we&#8217;ll deploy the cluster to
+have a local registry enabled. This allows us to deploy our component docker containers locally later.</p>
 <p>You should also install &#8220;kubectl&#8221;, because that utility is used to deploy kubeflow and it&#8217;s also
 what you would use for diagnostics to make sure everything is up and running.</p>
-<p>So when you you have kind installed on your computer, it should now be as simple as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">kind</span> <span class="n">create</span> <span class="n">cluster</span>
+<p>The <cite>kind_with_local_registry.sh</cite> script is in the tutorials directory.
+So when you have kind installed on your computer, it should now be as simple as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">kind_with_local_registry</span><span class="o">.</span><span class="n">sh</span>
 <span class="n">export</span> <span class="n">PIPELINE_VERSION</span><span class="o">=</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span>
 <span class="n">kubectl</span> <span class="n">apply</span> <span class="o">-</span><span class="n">k</span> <span class="s2">&quot;github.com/kubeflow/pipelines/manifests/kustomize/cluster-scoped-resources?ref=$PIPELINE_VERSION&quot;</span>
 <span class="n">kubectl</span> <span class="n">wait</span> <span class="o">--</span><span class="k">for</span> <span class="n">condition</span><span class="o">=</span><span class="n">established</span> <span class="o">--</span><span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="n">s</span> <span class="n">crd</span><span class="o">/</span><span class="n">applications</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">k8s</span><span class="o">.</span><span class="n">io</span>
